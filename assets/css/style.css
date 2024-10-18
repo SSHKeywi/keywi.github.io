@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
-
-@font-face {
-	font-family: 'minecraftfont';
-	src: url('../assets/font/minecraftfont.woff') format('woff');
-}
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -638,8 +634,8 @@ span {
   font-size: 20px;
   text-align: left; 
   color: yellow;
-  font-family: 'minecraftfont';
-  letter-spacing: .2rem;
+  font-family: 'Silkscreen', sans-serif;
+  font-style: bold;
 }
 
 /* Achievement Description */
@@ -647,7 +643,8 @@ span {
   margin: 0;
   font-size: 20px;
   text-align: left;
-  font-family: 'minecraftfont';
+  font-family: 'Silkscreen', sans-serif;
+  font-style: bold;
 }
 
 
