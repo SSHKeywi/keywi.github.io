@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+@font-face {
+	font-family: 'minecraftfont';
+	src: local('minecraftfont'), url('/assets/font/minecraftfont.woff') format('woff');
+}
 
 * {
   margin: 0;
@@ -160,6 +164,10 @@ span {
 .home-content p {
   font-size: 1.8rem;
   font-weight: 500;
+}
+
+.br-top {
+  margin: 2rem auto;
 }
 
 .social-icon a {
@@ -512,6 +520,7 @@ span {
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+  flex-direction: column;
 }
 
 .popup-logo {
@@ -538,6 +547,27 @@ span {
   line-height: 1.5;
 }
 
+.btnegg {
+  margin-right: 1rem;
+  padding: 0.5rem 2.3rem;
+  background: white;
+  border-radius: 1rem 1rem 0 0;
+  font-size: 1.4rem;
+  color: var(--main-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+  cursor: pointer;
+  display: none;
+}
+
+.btnegg:hover {
+  background-color: rgb(123, 182, 206);
+  color: black;
+  box-shadow: 0 0 25px var(--main-color);
+}
+
+
 .lexique-btn a {
   margin-top: 4rem;
   display: inline-block;
@@ -559,6 +589,97 @@ span {
   background-color: var(--main-color);
   color: black;
   box-shadow: 0 0 25px var(--main-color);
+}
+
+/* Achievement Container */
+.achievement-container {
+  position: fixed;
+  top: -200px; 
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 400px;
+  background-color: rgb(33, 33, 33);
+  color: #fff;
+  border: 6px solid #555555;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(229 236 229 / 50%);
+  z-index: 1000;
+  opacity: 0;
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  padding: 10px;
+  transition: top 0.5s ease, opacity 0.5s ease;
+}
+
+/* Achievement Icon */
+.achievement-icon {
+  flex: 0 0 60px; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  font-size: 48px; 
+  color: #ffffff; 
+}
+
+/* Achievement Text */
+.achievement-text {
+  flex: 1; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  margin-left: 20px;                             
+}
+
+/* Achievement Title */
+.achievement-text h3 {
+  margin: 0 0 10px 0; 
+  font-size: 20px;
+  text-align: left; 
+  color: yellow;
+  font-family: 'minecraftfont';
+  letter-spacing: .2rem;
+}
+
+/* Achievement Description */
+.achievement-text p {
+  margin: 0;
+  font-size: 20px;
+  text-align: left;
+  font-family: 'minecraftfont';
+}
+
+
+/* Keyframes pour une animation de glissement */
+@keyframes slideDown {
+  from {
+      top: -100px;
+      opacity: 0;
+  }
+  to {
+      top: 20px;
+      opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+      top: 20px;
+      opacity: 1;
+  }
+  to {
+      top: -100px;
+      opacity: 0;
+  }
+}
+
+/* Animation Classes */
+.show-achievement {
+  animation: slideDown 0.5s forwards;
+}
+
+.hide-achievement {
+  animation: slideUp 0.5s forwards;
 }
 
 /* Responsive Styles */
