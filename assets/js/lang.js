@@ -9,7 +9,7 @@ const resources = {
       nav: {
         home: "Home",
         skills: "Skills",
-        education: "Education",
+        path: "Timeline",
         experience: "Experience",
         contact: "Contact",
       },
@@ -77,7 +77,7 @@ const resources = {
           description:
             "Wireshark is a network protocol analyzer used to capture and interactively browse the traffic running on a computer network.",
           description2:
-            "It's widely used for network troubleshooting, analysis, software and protocol development, and education.",
+            "It's widely used for network troubleshooting, analysis, software and protocol development, and path.",
         },
         aircrackng: {
           name: "Aircrack-ng",
@@ -186,6 +186,21 @@ const resources = {
           },
         },
       },
+      path: {
+        heading: "Timeline",
+        tag1: "IAD France | Agent Commercial - 2017-2018",
+        desc1: "",
+        tag2: "MicroLycée de Sénart - 2018-2020", 
+        desc2: "Baccalauréat économique et social",
+        tag3: "LH Digicom | Directeur Technique Associé - 2019-2022",
+        desc3: "Director technique associer",
+        tag4: "INTECH / ESIEA - École d'Ingénieur·e·s d'un numérique utile 2021-2027",
+        desc4: "Cisco Networking Academy 1 2022 ,Cisco Networking Academy 2 2023,  RNCP 6 Administrateur d'infrastructures sécurisées 2024",
+        tag5: "Achievements",
+        desc5: "Egg Hunt 2021",
+        tag6: "Hobbies",
+        desc6: "Photography",
+      },
       achievements: {
         eggupdate: {
           title: "Achievement Made!",
@@ -202,7 +217,7 @@ const resources = {
       nav: {
         home: "Accueil",
         skills: "Compétences",
-        education: "Formation",
+        path: "Parcours",
         experience: "Expérience",
         contact: "Contact",
       },
@@ -379,6 +394,9 @@ const resources = {
             description2: "",
           },
         },
+      },
+      path: {
+        heading: "Parcours",
       },
       achievements: {
         eggupdate: {
