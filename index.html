@@ -586,6 +586,17 @@
     <!-- Timeline Section -->
     <section id="path" class="path">
         <h2 class="heading" data-i18n="path.heading">Mon Parcours</h2>
+        
+        <!-- Boutons de filtre -->
+        <div class="filter-buttons">
+            <button data-filter="all" class="active">Tous</button>
+            <button data-filter="education">Éducation</button>
+            <button data-filter="experience">Expériences</button>
+            <button data-filter="project">Projets</button>
+            <button data-filter="engagement">Engagements</button>
+            <button data-filter="certification">Certification</button>
+        </div>
+
         <div class="line"></div>
         <div class="timeline">
             
@@ -677,282 +688,297 @@
                 </div>
 
                 <!-- Diplôme et Certifications à l'ESIEA -->
+
                 <div class="timeline-item education-item">
                     <div class="timeline-icon education-icon">
                         <i class="fas fa-school"></i>
                     </div>
-                    <div class="bigbox">
-                        <div class=" bigbox timeline-content">
-                            <div class="institution-logo">
-                                <img src="assets/img/esiea-logo.png" alt="ESIEA Logo">
-                            </div>
-                            <div class="education-details">
-                                <h4>Etudiant - INTECH/ESIEA École d'Ingénieur·e·s d'un Numérique Utile</h4>
-                                <span>Septembre 2021 - Juillet 2027</span>
-                                <p>, Ivry-sur-Seine, Île-de-France, France</p>
-                                <p>Programme Expert Architecture Cloud, DevSecOps & Cybersécurité</p>
-                            </div>
+                    <div class="timeline-content">
+                        <div class="institution-logo">
+                            <img src="assets/img/saint-pierre-institut-logo.png" alt="Saint Pierre Institut Logo">
                         </div>
-                        <div class="bigbox body">
-                            <div class="bigbox frame">
-                                <div class="projects">
-                                    <div class="timeline-item project-item">
-                                        <div class="timeline-icon project-icon">
-                                            <i class="fas fa-project-diagram"></i>
-                                        </div>
-                                        <div class="timeline-content project-box">
-                                            <div class="institution-logo">
-                                                <img src="assets/img/fanos-logo.png" alt="Fanos Logo">
-                                            </div>
-                                            <div class="project-details">
-                                                <h4>Chef de projet - Your Life... but</h4>
-                                                <span>septembre 2021 - février 2022</span>
-                                                <p>En tant que chef d’équipe et développeur, j'ai contribué à la création du jeu interactif "Your Life... but", une aventure captivante où les joueurs naviguent à travers les étapes de la vie. Ce projet, alliant gameplay immersif et apprentissage, incite à prendre des décisions stratégiques tout en offrant des conseils concrets pour surmonter les défis de la vie réelle.</p>
-
-                                                <div class="lexique-btn">
-                                                    <a href="#" data-i18n="">En savoir plus</a>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="timeline-item engagement-item">
-                                        <div class="timeline-icon engagement-icon">
-                                            <i class="fas fa-handshake"></i>
-                                        </div>
-                                        <div class="timeline-content engagements-box">
-                                            <div class="institution-logo">
-                                                <img src="assets/img/radio-esiea-logo.png" alt="Radio ESIEA Club Logo">
-                                            </div>
-                                            <div class="engagement-details">
-                                                <h4>Vice Président - Radio ESIEA Club</h4>
-                                                <span>Mars 2022 - Mars 2024</span>
-                                                <p>Domaine : Arts et culture</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="timeline-item engagement-item">
-                                        <div class="timeline-icon engagement-icon">
-                                            <i class="fas fa-handshake"></i>
-                                        </div>
-                                        <div class="timeline-content engagements-box">
-                                            <div class="institution-logo">
-                                                <img src="assets/img/radio-esiea-logo.png" alt="Radio ESIEA Club Logo">
-                                            </div>
-                                            <div class="engagement-details">
-                                                <h4>Responsable Événements - Association Sportive de l'ESIEA Paris</h4>
-                                                <span>Mars 2022 - Mars 2023</span>
-                                                <p>Domaine : Arts et culture</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="timeline-item project-item">
-                                        <div class="timeline-icon project-icon">
-                                            <i class="fas fa-project-diagram"></i>
-                                        </div>
-                                        <div class="timeline-content project-box">
-                                            <div class="institution-logo">
-                                                <img src="assets/img/fanos-logo.png" alt="Fanos Logo">
-                                            </div>
-                                            <div class="project-details">
-                                                <h4>Chef de projet - Pogo</h4>
-                                                <span>Mars 2022 - Juin 2022</span>
-                                                <p>En tant que chef de projet et développeur, j'ai dirigé la création d'un site e-commerce axé sur l'achat de vêtements, offrant une expérience fluide et intuitive. Grâce à l'utilisation de technologies telles que HTML, JavaScript et MariaDB, nous avons conçu une plateforme efficace, permettant une gestion simplifiée des articles et des utilisateurs tout en garantissant une navigation optimale pour les clients.</p>
-                                            
-                                                <div class="lexique-btn">
-                                                    <a href="#" data-i18n="">En savoir plus</a>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="timeline-item project-item">
-                                        <div class="timeline-icon experience-icon">
-                                            <i class="fas fa-briefcase"></i>
-                                        </div>
-                                        <div class="timeline-content experience-box">
-                                            <div class="institution-logo">
-                                                <img src="assets/img/iad-logo.png" alt="IAD Logo">
-                                            </div>
-                                            <div class="experience-details">
-                                                <h4>Monteur / Videaste / Réalisateur - Groupe ESIEA</h4>
-                                                <span>Août 2022 - Août 2023</span>
-                                                <p>En tant que vidéaste, réalisateur et monteur audiovisuel pour le groupe de mon école, j'ai réalisé des vidéos et des photos en accord avec les objectifs de communication de l'établissement. Grâce à des outils comme Adobe Premiere Pro, Photoshop, Illustrator et After Effects, j'ai garanti des productions de qualité tout en développant mes compétences en design graphique et en gestion de projet.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="timeline-item project-item">
-                                        <div class="timeline-icon project-icon">
-                                            <i class="fas fa-project-diagram"></i>
-                                        </div>
-                                        <div class="timeline-content project-box">
-                                            <div class="institution-logo">
-                                                <img src="assets/img/fanos-logo.png" alt="Fanos Logo">
-                                            </div>
-                                            <div class="project-details">
-                                                <h4>Chef de projet - Exsilum</h4>
-                                                <span>septembre 2022 - février 2023</span>
-                                                <p>En tant que chef de projet et développeur, j'ai dirigé un projet visant à renforcer la sécurité de la distribution Debian 11 en automatisant son durcissement via Ansible, conformément aux directives du CIS et de l'ANSSI. Ce projet, qui incluait une interface d'administration web et un système de journalisation, a été reconnu en terminant premier au "Techday" dans la catégorie architectures systèmes, réseaux et sécurité.</p>
-
-                                                <div class="lexique-btn">
-                                                    <a href="#" data-i18n="">En savoir plus</a>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="timeline-item engagement-item">
-                                        <div class="timeline-icon engagement-icon">
-                                            <i class="fas fa-handshake"></i>
-                                        </div>
-                                        <div class="timeline-content engagements-box">
-                                            <div class="institution-logo">
-                                                <img src="assets/img/radio-esiea-logo.png" alt="Radio ESIEA Club Logo">
-                                            </div>
-                                            <div class="engagement-details">
-                                                <h4>Responsable Communications - Bureau Des Etudiants Groupe ESIEA Paris</h4>
-                                                <span>Février 2023 - Février 2024</span>
-                                                <p>Domaine : Arts et culture</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="timeline-item project-item">
-                                        <div class="timeline-icon certification-icon">
-                                            <i class="fas fa-certificate"></i>
-                                        </div>
-                                        <div class="timeline-content">
-                                            <div class="institution-logo">
-                                                <img src="assets/img/fanos-logo.png" alt="Fanos Logo">
-                                            </div>
-                                            <div class="project-details">
-                                                <h4>[RNCP-6] Administrateur d'infrastructures sécurisées</h4>
-                                                <span>Août 2024</span>
-                                                <p>Ministère du Travail</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="projects">
-                                    <div class="timeline-item project-item">
-                                        <div class="timeline-icon project-icon">
-                                            <i class="fas fa-project-diagram"></i>
-                                        </div>
-                                        <div class="timeline-content">
-                                            <div class="institution-logo">
-                                                <img src="assets/img/fanos-logo.png" alt="Fanos Logo">
-                                            </div>
-                                            <div class="project-details">
-                                                <h4>Fanos</h4>
-                                                <span>Mars 2023 - Juillet 2023</span>
-                                                <p>Supervision proactive du réseau pédagogique de l’établissement utilisant SNMP, Prometheus, Grafana, InfluxDB et Alert Manager.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                </div>
-                                <div class="engagements">
-                                    <div class="timeline-item engagement-item">
-                                        <div class="timeline-icon engagement-icon">
-                                            <i class="fas fa-handshake"></i>
-                                        </div>
-                                        <div class="timeline-content">
-                                            <div class="institution-logo">
-                                                <img src="assets/img/radio-esiea-logo.png" alt="Radio ESIEA Club Logo">
-                                            </div>
-                                            <div class="engagement-details">
-                                                <h4>Vice Président - Radio ESIEA Club</h4>
-                                                <span>Mars 2022 - Aujourd’hui</span>
-                                                <p>Domaine : Arts et culture</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>    
+                        <div class="education-details">
+                            <h4>Etudiant - Saint Pierre Institut</h4>
+                            <span>Septembre 2015 - Juin 2016</span>
+                            <p>Lycée Hôtelier, Brunoy</p>
                         </div>
-                        <div class="bigbox bottom"></div>
                     </div>
                 </div>
-                    
-                </div> 
-                    
 
-                            
-                        <!-- Sous-Contenu pour Certifications, Projets et Engagements Associatifs
-                        <div class="under-content">
-                            
+                <div class="timeline-item education-item">
+                    <div class="timeline-icon education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="institution-logo">
+                            <img src="assets/img/esiea-logo.png" alt="ESIEA Logo">
+                        </div>
+                        <div class="education-details">
+                            <h4>Etudiant - INTECH/ESIEA École d'Ingénieur·e·s d'un Numérique Utile</h4>
+                            <span>Septembre 2021 - Juillet 2027</span>
+                            <p>, Ivry-sur-Seine, Île-de-France, France</p>
+                            <p>Programme Expert Architecture Cloud, DevSecOps & Cybersécurité</p>
+                        </div>
+                    </div>
+                </div>
 
-                            <div class="certifications">
-                                <h5><i class="fas fa-certificate" aria-label="Certification"></i> [RNCP-6] Administrateur d'infrastructures sécurisées</h5>
-                                <span>Août 2024</span>
-                                <p>Délivrée par le Ministère du Travail</p>
-                                
-                                <h5><i class="fas fa-certificate" aria-label="Certification"></i> CCNA Routing and Switching</h5>
-                                <span>Mars 2023</span>
-                                <p>Cisco</p>
-                                
-                                <h5><i class="fas fa-certificate" aria-label="Certification"></i> CCNA Security</h5>
-                                <span>Juin 2023</span>
-                                <p>Cisco</p>
+                <div class="timeline-item project-item">
+                    <div class="timeline-icon project-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="timeline-content project-box">
+                        <div class="institution-logo">
+                            <img src="assets/img/fanos-logo.png" alt="Fanos Logo">
+                        </div>
+                        <div class="project-details">
+                            <h4>Chef de projet - Your Life... but</h4>
+                            <span>septembre 2021 - février 2022</span>
+                            <p>En tant que chef d’équipe et développeur, j'ai contribué à la création du jeu interactif "Your Life... but", une aventure captivante où les joueurs naviguent à travers les étapes de la vie. Ce projet, alliant gameplay immersif et apprentissage, incite à prendre des décisions stratégiques tout en offrant des conseils concrets pour surmonter les défis de la vie réelle.</p>
+
+                            <div class="lexique-btn">
+                                <a href="#" data-i18n="">En savoir plus</a>
                             </div>
-                            
 
-                            <div class="projects">
-                                <h5><i class="fas fa-project-diagram" aria-label="Projet"></i> Projets</h5>
-                                <div class="timeline-item project-item">
-                                    <div class="timeline-icon project-icon">
-                                        <i class="fas fa-project-diagram"></i>
-                                    </div>
-                                    <div class="timeline-content">
-                                        <div class="institution-logo">
-                                            <img src="assets/img/fanos-logo.png" alt="Fanos Logo">
-                                        </div>
-                                        <div class="project-details">
-                                            <h4>Fanos</h4>
-                                            <span>Mars 2023 - Juillet 2023</span>
-                                            <p>Supervision proactive du réseau pédagogique de l’établissement utilisant SNMP, Prometheus, Grafana, InfluxDB et Alert Manager.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="timeline-item engagement-item">
+                    <div class="timeline-icon engagement-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="timeline-content engagements-box">
+                        <div class="institution-logo">
+                            <img src="assets/img/radio-esiea-logo.png" alt="Radio ESIEA Club Logo">
+                        </div>
+                        <div class="engagement-details">
+                            <h4>Vice Président - Radio ESIEA Club</h4>
+                            <span>Mars 2022 - Mars 2024</span>
+                            <p>Domaine : Arts et culture</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item engagement-item">
+                    <div class="timeline-icon engagement-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="timeline-content engagements-box">
+                        <div class="institution-logo">
+                            <img src="assets/img/radio-esiea-logo.png" alt="Radio ESIEA Club Logo">
+                        </div>
+                        <div class="engagement-details">
+                            <h4>Responsable Événements - Association Sportive de l'ESIEA Paris</h4>
+                            <span>Mars 2022 - Mars 2023</span>
+                            <p>Domaine : Arts et culture</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item project-item">
+                    <div class="timeline-icon project-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="timeline-content project-box">
+                        <div class="institution-logo">
+                            <img src="assets/img/fanos-logo.png" alt="Fanos Logo">
+                        </div>
+                        <div class="project-details">
+                            <h4>Chef de projet - Pogo</h4>
+                            <span>Mars 2022 - Juin 2022</span>
+                            <p>En tant que chef de projet et développeur, j'ai dirigé la création d'un site e-commerce axé sur l'achat de vêtements, offrant une expérience fluide et intuitive. Grâce à l'utilisation de technologies telles que HTML, JavaScript et MariaDB, nous avons conçu une plateforme efficace, permettant une gestion simplifiée des articles et des utilisateurs tout en garantissant une navigation optimale pour les clients.</p>
+                        
+                            <div class="lexique-btn">
+                                <a href="#" data-i18n="">En savoir plus</a>
                             </div>
-                            
-                            <div class="engagements">
-                                <h5><i class="fas fa-handshake" aria-label="Engagement Associatif"></i> Engagements Associatifs</h5>
-                                <div class="timeline-item engagement-item">
-                                    <div class="timeline-icon engagement-icon">
-                                        <i class="fas fa-handshake"></i>
-                                    </div>
-                                    <div class="timeline-content">
-                                        <div class="institution-logo">
-                                            <img src="assets/img/radio-esiea-logo.png" alt="Radio ESIEA Club Logo">
-                                        </div>
-                                        <div class="engagement-details">
-                                            <h4>Vice Président - Radio ESIEA Club</h4>
-                                            <span>Mars 2022 - Aujourd’hui</span>
-                                            <p>Domaine : Arts et culture</p>
-                                        </div>
-                                    </div>
-                                </div>
 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item experience-item">
+                    <div class="timeline-icon experience-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content experience-box">
+                        <div class="institution-logo">
+                            <img src="assets/img/iad-logo.png" alt="IAD Logo">
+                        </div>
+                        <div class="experience-details">
+                            <h4>Monteur / Videaste / Réalisateur - Groupe ESIEA</h4>
+                            <span>Août 2022 - Août 2023</span>
+                            <p>En tant que vidéaste, réalisateur et monteur audiovisuel pour le groupe de mon école, j'ai réalisé des vidéos et des photos en accord avec les objectifs de communication de l'établissement. Grâce à des outils comme Adobe Premiere Pro, Photoshop, Illustrator et After Effects, j'ai garanti des productions de qualité tout en développant mes compétences en design graphique et en gestion de projet.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item project-item">
+                    <div class="timeline-icon project-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="timeline-content project-box">
+                        <div class="institution-logo">
+                            <img src="assets/img/fanos-logo.png" alt="Fanos Logo">
+                        </div>
+                        <div class="project-details">
+                            <h4>Chef de projet - Exsilum</h4>
+                            <span>septembre 2022 - février 2023</span>
+                            <p>En tant que chef de projet et développeur, j'ai dirigé un projet visant à renforcer la sécurité de la distribution Debian 11 en automatisant son durcissement via Ansible, conformément aux directives du CIS et de l'ANSSI. Ce projet, qui incluait une interface d'administration web et un système de journalisation, a été reconnu en terminant premier au "Techday" dans la catégorie architectures systèmes, réseaux et sécurité.</p>
+
+                            <div class="lexique-btn">
+                                <a href="#" data-i18n="">En savoir plus</a>
                             </div>
-                            
-                        </div> 
-                    </div> --> 
-                
-            </div> <!-- Fin de .timeline-section education-section -->
 
-            <!-- Autres Sections (Expérience Professionnelle, Projets, Engagements Associatifs) -->
-            <!-- Vous pouvez ajouter d'autres sections ici si nécessaire -->
-            
-        </div> <!-- Fin de .timeline -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item engagement-item">
+                    <div class="timeline-icon engagement-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="timeline-content engagements-box">
+                        <div class="institution-logo">
+                            <img src="assets/img/radio-esiea-logo.png" alt="Radio ESIEA Club Logo">
+                        </div>
+                        <div class="engagement-details">
+                            <h4>Responsable Communications - Bureau Des Etudiants Groupe ESIEA Paris</h4>
+                            <span>Février 2023 - Février 2024</span>
+                            <p>Domaine : Arts et culture</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item project-item">
+                    <div class="timeline-icon project-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="timeline-content project-box">
+                        <div class="institution-logo">
+                            <img src="assets/img/fanos-logo.png" alt="Fanos Logo">
+                        </div>
+                        <div class="project-details">
+                            <h4>Chef de projet - Fanos</h4>
+                            <span>Mars 2023 - Juillet 2023</span>
+                            <p>Supervision proactive du réseau pédagogique de l’établissement utilisant SNMP, Prometheus, Grafana, InfluxDB et Alert Manager.</p>
+                        
+                            <div class="lexique-btn">
+                                <a href="#" data-i18n="">En savoir plus</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item certification-item">
+                    <div class="timeline-icon certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="institution-logo">
+                            <img src="assets/img/fanos-logo.png" alt="Fanos Logo">
+                        </div>
+                        <div class="project-details">
+                            <h4>[CCNAv7] Introduction to Networks</h4>
+                            <span>Avril 2023</span>
+                            <p>Cisco Networking Academy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item experience-item">
+                    <div class="timeline-icon experience-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content experience-box">
+                        <div class="institution-logo">
+                            <img src="assets/img/iad-logo.png" alt="IAD Logo">
+                        </div>
+                        <div class="experience-details">
+                            <h4>Réponse aux Incidents L3 - Saint-Gobain - Alternance</h4>
+                            <span>Août 2023 - Août 2024</span>
+                            <p>Analyse des fraudes des cas de phishing.
+                                Audit des règles de détection liées à la MITRE ATT&CK.
+                                Chefferie de projet en collaboration avec une équipe basée
+                                en Inde sur la mise en place de documentation des règles.
+                                Réalisation de script d’automatisation de tâches.
+                                Création d’un tableau de bord web en Flask et Python dédié
+                                aux indicateurs clés de performance (KPIs).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item engagement-item">
+                    <div class="timeline-icon engagement-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="timeline-content engagements-box">
+                        <div class="institution-logo">
+                            <img src="assets/img/radio-esiea-logo.png" alt="Radio ESIEA Club Logo">
+                        </div>
+                        <div class="engagement-details">
+                            <h4>Photographe - HZV (hackerzvoice)</h4>
+                            <span>Février 2023 - Février 2024</span>
+                            <p>Domaine : Arts et culture</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item certification-item">
+                    <div class="timeline-icon certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="institution-logo">
+                            <img src="assets/img/fanos-logo.png" alt="Fanos Logo">
+                        </div>
+                        <div class="project-details">
+                            <h4>[CCNAv7] Switching, Routing, and Wireless Essentials</h4>
+                            <span>Juillet 2024</span>
+                            <p>Cisco Networking Academy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item certification-item">
+                    <div class="timeline-icon certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="institution-logo">
+                            <img src="assets/img/fanos-logo.png" alt="Fanos Logo">
+                        </div>
+                        <div class="project-details">
+                            <h4>[RNCP-6] Administrateur d'infrastructures sécurisées</h4>
+                            <span>Août 2024</span>
+                            <p>Ministère du Travail</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item certification-item">
+                    <div class="timeline-icon certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="institution-logo">
+                            <img src="assets/img/fanos-logo.png" alt="Fanos Logo">
+                        </div>
+                        <div class="project-details">
+                            <h4>[CCNAv7] Enterprise Networking, Security, and Automation</h4>
+                            <span>Octobre 2024</span>
+                            <p>Cisco Networking Academy</p>
+                        </div>
+                    </div>
+                </div>            
+
+            </div>      
+        </div>
+
+        <div class="show-more-container">
+            <button id="show-more-btn">...afficher plus</button>
+        </div>
+        
     </section>
 
 
@@ -967,6 +993,7 @@
     <script src="assets/js/dontlook.js"></script>
     <script src="assets/js/lang.js"></script>
     <script src="assets/js/bubble.js"></script>
+    <script src="assets/js/filter.js"></script>
 </body>
 
 </html>

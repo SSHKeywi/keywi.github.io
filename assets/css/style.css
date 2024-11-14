@@ -603,6 +603,29 @@ span {
   z-index: 1;
 }
 
+/* Styles pour les boutons de filtre */
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filter-buttons button {
+  background-color: var(--second-bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--main-color);
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+}
+
 .line {
   width: 100%;
   height: 2px;
@@ -661,11 +684,11 @@ span {
   transform: translateY(0);
 }
 
-.timeline-item:nth-child(odd) {
+.timeline-item.left {
   flex-direction: row;
 }
 
-.timeline-item:nth-child(even) {
+.timeline-item.right {
   flex-direction: row-reverse;
 }
 
@@ -750,11 +773,6 @@ span {
 .timeline-content ul li {
   margin-bottom: 0.5rem;
   color: #ccc;
-}
-
-/* Bigbox Styles */
-.bigbox .timeline-content {
-/*  border-radius: 8px 8px 0 0; */
 }
 
 .bigbox .body {
@@ -906,6 +924,29 @@ span {
 .engagement-details p {
   font-size: 1.3rem;
   color: #ddd;
+}
+
+.show-more-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#show-more-btn {
+  background-color: var(--second-bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--main-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.8rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#show-more-btn:hover {
+  background-color: var(--main-color);
+  color: var(--bg-color);
 }
 
 /* Responsive Design */
