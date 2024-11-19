@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="title">Test i18next</title>
+    <!-- Chargement des scripts essentiels -->
+    <script src="https://unpkg.com/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/i18next@21.6.14/dist/umd/i18next.min.js"></script>
+    <!-- Votre script de traduction -->
+    <script>
+        const resources = {
+            en: {
+                translation: {
+                    greeting: 'Hello 👋<br>I\'m <span class="name">Keywi</span>,',
+                    title: 'Test i18next',
+                }
+            },
+            fr: {
+                translation: {
+                    greeting: 'Salut 👋<br>Je suis <span class="name">Keywi</span>',
+                    title: 'Test i18next',
+                }
+            }
+        };
+
+        i18next.init({
+            resources,
+            lng: 'en',
+            interpolation: {
+                escapeValue: false,
+            },
+            initImmediate: false,
+        }, function(err, t) {
+            if (err) console.error(err);
+            updateContent();
+        });
+
+        function updateContent() {
+            document.title = i18next.t('title');
+            $('#greeting').html(i18next.t('greeting'));
+            $('body').css('visibility', 'visible');
+        }
+    </script>
+</head>
+<body>
+    <h1 id="greeting"></h1>
+</body>
+</html>

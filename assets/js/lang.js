@@ -412,61 +412,79 @@ const resources = {
   
   // Initialiser i18next
   i18next
-    .use(i18nextBrowserLanguageDetector) // Utiliser le détecteur de langue
+    .use(i18nextBrowserLanguageDetector) 
     .init(
       {
         resources,
         fallbackLng: "en",
         debug: false,
         interpolation: {
-          escapeValue: false, // Nécessaire pour interpréter le HTML
+          escapeValue: false,
         },
       },
       function (err, t) {
         if (err) return console.error(err);
-        // Initialiser la liaison avec jQuery
+  
         jqueryI18next.init(i18next, $, {
           useOptionsAttr: true,
         });
-        // Traduire le contenu
+   
         $("body").localize();
   
-        // Traduction avec HTML
-        $("h1[data-i18n='greeting']").html(i18next.t("greeting"));
+        document.querySelector("h1[data-i18n='greeting']").innerHTML = i18next.t("greeting");
+      }
+    );
+
+    i18next
+    .use(i18nextBrowserLanguageDetector)
+    .init(
+      {
+        resources,
+        fallbackLng: "en",
+        debug: false,
+        interpolation: {
+          escapeValue: false, 
+        },
+      },
+      function (err, t) {
+        if (err) return console.error(err);
+  
+
+        $("body").localize();
+        document.querySelector("h1[data-i18n='greeting']").innerHTML = i18next.t("greeting");
       }
     );
   
-  // Gestion des boutons de langue
+
   $(document).ready(function () {
+
     $("#en-btn").on("click", function () {
       i18next.changeLanguage("en", (err, t) => {
         if (err) return console.error("Erreur lors du changement de langue", err);
         $("body").localize();
-        $("h1[data-i18n='greeting']").html(i18next.t("greeting"));
+        document.querySelector("h1[data-i18n='greeting']").innerHTML = i18next.t("greeting");
       });
-      // Mettre à jour le localStorage
+
       localStorage.setItem("language", "en");
     });
   
+
     $("#fr-btn").on("click", function () {
       i18next.changeLanguage("fr", (err, t) => {
         if (err) return console.error("Erreur lors du changement de langue", err);
         $("body").localize();
-        $("h1[data-i18n='greeting']").html(i18next.t("greeting"));
+        document.querySelector("h1[data-i18n='greeting']").innerHTML = i18next.t("greeting");
       });
-      // Mettre à jour le localStorage
+
       localStorage.setItem("language", "fr");
     });
   
-    // Charger la langue préférée au chargement de la page
-    const savedLang = localStorage.getItem("language");
-    if (savedLang) {
-      i18next.changeLanguage(savedLang, (err, t) => {
-        if (err)
-          return console.error("Erreur lors du chargement de la langue préférée", err);
-        $("body").localize();
-        $("h1[data-i18n='greeting']").html(i18next.t("greeting"));
-      });
-    }
+
+    const savedLang = localStorage.getItem("language") || "en";
+    i18next.changeLanguage(savedLang, (err, t) => {
+      if (err) return console.error("Erreur lors du chargement de la langue préférée", err);
+      $("body").localize();
+      document.querySelector("h1[data-i18n='greeting']").innerHTML = i18next.t("greeting");
+    });
   });
   
