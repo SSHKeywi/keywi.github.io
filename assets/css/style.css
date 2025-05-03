@@ -16,7 +16,7 @@
   --bg-color: #000000;
   --second-bg-color: #161616;
   --text-color: #ffffff;
-  --main-color: #b81c1c;
+  --main-color: #b19549;
 }
 
 html {
@@ -113,7 +113,7 @@ html::-webkit-scrollbar-thumb {
 /* Home Section */
 section {
   min-height: 100vh;
-  padding: 5rem 9%;
+  padding: 12rem 9%;
 }
 
 .home {
