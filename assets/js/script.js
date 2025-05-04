@@ -29,3 +29,20 @@ document.addEventListener('DOMContentLoaded', function() {
       observer.observe(item);
   });
 });
+
+
+let lastScrollY = window.scrollY;
+const header = document.getElementById('main-header');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY) {
+        // Scroll vers le bas
+        header.classList.add('hide');
+    } else {
+        // Scroll vers le haut
+        header.classList.remove('hide');
+    }
+    lastScrollY = window.scrollY;
+});
+
+

@@ -7,10 +7,10 @@ const resources = {
       title: "Keywi Portfolio",
       logo: "Keywi",
       nav: {
-        home: "Home",
         skills: "Skills",
         path: "Timeline",
         experience: "Experience",
+        writeup: "WriteUp",
         contact: "Contact",
       },
       greeting: "Hello&#128075;<br>I'm <span class=\"name\">Keywi</span>,",
@@ -215,10 +215,10 @@ const resources = {
       title: "Portfolio de Keywi",
       logo: "Keywi",
       nav: {
-        home: "Accueil",
         skills: "Compétences",
         path: "Parcours",
         experience: "Expérience",
+        writeup: "WriteUp",
         contact: "Contact",
       },
       greeting:

@@ -52,8 +52,15 @@ html::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 1000;
+  transition: top 0.3s ease-in-out;
 }
+
+.header.hide {
+  top: -150px;
+}
+
+
 
 .logo {
   color: var(--main-color);
