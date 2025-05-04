@@ -366,112 +366,113 @@ span {
   margin-bottom: 1rem;
 }
 
-/* Skills Section with Bubble Animation */
-.skills {
-  background: var(--second-bg-color);
-  padding: 5rem 0;
-  position: relative;
-  overflow: hidden;
+/* ===========================================
+   Styles pour le TreeContainer et l’arbre D3
+   =========================================== */
+
+   #treeContainer {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 1rem 0;
+    box-sizing: border-box;
+  }
+
+  #treeContainer svg text {
+  fill: #b19549;           /* ta couleur principale */
+  font-family: monospace;  /* ou ce que tu veux */
+  font-size: 1.4rem;       /* à adapter */
+  stroke: rgba(0,0,0,0.8);  /* contour sombre */
+  stroke-width: 4px;       /* épaisseur du contour */
+  paint-order: stroke;     /* dessine d’abord le contour, puis le fill */
+}
+  
+  #treeContainer svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  #treeContainer svg text {
+    fill: #307d1b;           /* ta couleur principale */
+    font-family: monospace;  /* ou ce que tu veux */
+    font-size: 1.4rem;       /* à adapter */
+    stroke: rgba(0,0,0,0.8);  /* contour sombre */
+    stroke-width: 4px;       /* épaisseur du contour */
+    paint-order: stroke;     /* dessine d’abord le contour, puis le fill */
+  }
+  
+  .link {
+    fill: none;
+    stroke: var(--main-color);
+    stroke-width: 2px;
+    filter: none; 
+  }
+    svg {
+      overflow: visible;
+  }
+  
+  .node-circle {
+    stroke: #fff;
+    stroke-width: 2px;
+    filter: url(#glow);
+  }
+  
+  .logo-bg {
+    fill: #fff;
+    filter: url(#glow);
+  }
+  
+  .node-logo {
+    filter: url(#glow);
+  }
+  
+  /*  Texte à droite de chaque nœud  */
+  .node text {
+    fill: var(--main-color);
+    font-family: 'Silkscreen', monospace;
+    font-size: 15px;
+    text-anchor: start;   /* ← texte à droite */
+    dominant-baseline: middle;
+    pointer-events: none;
+  }
+  
+  
+/* Popup styling remains as before */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  justify-content: center;
+  align-items: center;
 }
 
-.skills .heading {
-  position: relative;
-  z-index: 2;
-}
-
-.line {
-  height: 5px;
+.popup-content {
+  background: #101020;
+  padding: 2rem;
   border-radius: 1rem;
-  background: var(--main-color);
-  margin-bottom: 2rem;
-  position: relative;
-  z-index: 2;
-}
-
-#switchModeButton {
-  position: relative;
-  width: 80px;
-  height: 34px;
-  background-color: #ccc;
-  border-radius: 34px;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 0;
-  transition: background-color 0.3s;
-}
-
-#switchModeButton .switch {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 28px;
-  height: 28px;
-  background-color: white;
-  border-radius: 50%;
-  transition: left 0.3s;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Prend toute la hauteur de la page */
-  background-color: rgba(255, 255, 255, 0);
-}
-
-#switchModeButton.active .switch {
-  transform: translateX(44px); /* Déplacement du levier lors du changement */
-}
-
-#switchModeButton.active {
-  background-color: #b81c1c;
-}
-
-.bubble-container {
-    height: calc(100vh - var(--header-height, 70px)); /* Exemple pour ajuster selon la hauteur du header */
-    overflow: hidden;
-    position: relative;
-}
-
-.bubble {
-  width: 10rem;
-  height: 10rem;
-  position: absolute;
-  border-radius: 50%;
-  background-color: rgba(184, 28, 28, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--text-color);
+  box-shadow: 0 0 30px #b78510;
+  max-width: 500px;
   text-align: center;
-  cursor: grab;
-  transition: transform 0.3s ease;
-  z-index: 2;
 }
 
-.bubble:hover {
-  transform: scale(1.1);
-}
-
-.bubble img {
-  width: 50%;
-  height: 50%;
-  object-fit: contain;
-}
-
-.bubble span {
-  position: absolute;
-  bottom: -2rem;
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: var(--text-color);
-  width: max-content;
-  z-index: 3;
-}
-
-.bubble:active {
-  cursor: grabbing;
+.popup button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #c28500;
+  border: none;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 /* Popup Styles */
@@ -488,7 +489,7 @@ span {
 
 .popup-content {
   position: relative;
-  background-color: rgb(121, 23, 18);
+  background-color: rgb(97, 75, 28);
   margin: 10% auto;
   padding: 20px;
   width: 80%;
