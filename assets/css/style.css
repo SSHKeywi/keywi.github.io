@@ -145,25 +145,81 @@ span {
   color: var(--main-color);
 }
 
+/* conteneur image */
 .home-img {
-  width: 32vw;
+  position: relative;
+  width: 100%;
   border-radius: 20%;
   box-shadow: 0 0 25px var(--main-color);
   cursor: pointer;
+  overflow: hidden;
+}
+
+/* logo + visage, même taille */
+.home-img .logo-img,
+.home-img .face-img {
   display: block;
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+  box-shadow: inherit;
+  transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
 }
 
-.home-img img {
-  width: 32vw;
-  border-radius: 20%;
-  box-shadow: 0 0 25px var(--main-color);
-  cursor: pointer;
+/* visage en superposition */
+.home-img .face-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  mix-blend-mode: screen;
 }
 
+/* ZOOM sur l’image seule quand on survole l’image */
 .home-img img:hover {
   transform: scale(1.01);
   filter: drop-shadow(0 0 25px var(--main-color));
 }
+
+/* === SWAP DÉCLENCHÉ PAR LA CLASSE .hovered SUR LA SECTION === */
+
+.home.hovered .logo-img {
+  opacity: 0;
+}
+.home.hovered .face-img {
+  opacity: 1;
+}
+
+/* --- texte qui change --- */
+.name {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: var(--main-color);
+  transition: color 0.2s ease;
+}
+
+.name::after {
+  content: attr(data-alt);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: var(--main-color);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.home.hovered .name {
+  color: transparent;
+}
+
+.home.hovered .name::after {
+  opacity: 1;
+}
+
+
 
 .home-content p {
   font-size: 1.8rem;

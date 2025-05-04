@@ -123,7 +123,8 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         name: "Certifications",
         children: [
-          { name: "PJPT", popup: "pjptPopup", logo: "assets/img/pjpt.png" }
+          { name: "PJPT", popup: "pjptPopup", logo: "assets/img/pjpt.png" },
+          { name: "CCNAv7", popup: "ccnav7Popup", logo: "assets/img/ccnav7.png" },
         ]
       }
     ]

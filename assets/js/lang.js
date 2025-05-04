@@ -13,7 +13,7 @@ const resources = {
         writeup: "WriteUp",
         contact: "Contact",
       },
-      greeting: "Hello&#128075;<br>I'm <span class=\"name\">Keywi</span>,",
+      greeting: "Hello&#128075;<br>I'm <span class=\"name\" data-alt=\"Alexandre,\">Keywi,</span>",
       jobTitle: "An",
       jobs: {
         pentester: "Apprentice Pentester",
@@ -221,8 +221,7 @@ const resources = {
         writeup: "WriteUp",
         contact: "Contact",
       },
-      greeting:
-        "Salut&#128075;<br>Je suis <span class=\"name\">Keywi</span>",
+      greeting: "Salut&#128075;<br>Je suis <span class=\"name\" data-alt=\"Alexandre,\">Keywi,</span>",
       jobTitle: "Un",
       jobs: {
         pentester: "Apprenti Pentester",
@@ -410,81 +409,36 @@ const resources = {
 };
 
   
-  // Initialiser i18next
-  i18next
-    .use(i18nextBrowserLanguageDetector) 
-    .init(
-      {
-        resources,
-        fallbackLng: "en",
-        debug: false,
-        interpolation: {
-          escapeValue: false,
-        },
-      },
-      function (err, t) {
-        if (err) return console.error(err);
-  
-        jqueryI18next.init(i18next, $, {
-          useOptionsAttr: true,
-        });
-   
-        $("body").localize();
-  
-        document.querySelector("h1[data-i18n='greeting']").innerHTML = i18next.t("greeting");
-      }
-    );
+i18next
+.use(i18nextBrowserLanguageDetector)
+.init({
+  resources,
+  fallbackLng: "en",
+  debug: false,
+  interpolation: { escapeValue: false },
+}, (err, t) => {
+  if (err) return console.error(err);
+  jqueryI18next.init(i18next, $, { useOptionsAttr: true });
+  $("body").localize();
+  document.querySelector("h1[data-i18n='greeting']").innerHTML = i18next.t("greeting");
+});
 
-    i18next
-    .use(i18nextBrowserLanguageDetector)
-    .init(
-      {
-        resources,
-        fallbackLng: "en",
-        debug: false,
-        interpolation: {
-          escapeValue: false, 
-        },
-      },
-      function (err, t) {
-        if (err) return console.error(err);
-  
-
-        $("body").localize();
-        document.querySelector("h1[data-i18n='greeting']").innerHTML = i18next.t("greeting");
-      }
-    );
-  
-
-  $(document).ready(function () {
-
-    $("#en-btn").on("click", function () {
-      i18next.changeLanguage("en", (err, t) => {
-        if (err) return console.error("Erreur lors du changement de langue", err);
-        $("body").localize();
-        document.querySelector("h1[data-i18n='greeting']").innerHTML = i18next.t("greeting");
-      });
-
-      localStorage.setItem("language", "en");
-    });
-  
-
-    $("#fr-btn").on("click", function () {
-      i18next.changeLanguage("fr", (err, t) => {
-        if (err) return console.error("Erreur lors du changement de langue", err);
-        $("body").localize();
-        document.querySelector("h1[data-i18n='greeting']").innerHTML = i18next.t("greeting");
-      });
-
-      localStorage.setItem("language", "fr");
-    });
-  
-
-    const savedLang = localStorage.getItem("language") || "en";
-    i18next.changeLanguage(savedLang, (err, t) => {
-      if (err) return console.error("Erreur lors du chargement de la langue préférée", err);
+$(document).ready(function() {
+["en","fr"].forEach(lang => {
+  $(`#${lang}-btn`).on("click", () => {
+    i18next.changeLanguage(lang, (err, t) => {
+      if (err) return console.error(err);
       $("body").localize();
       document.querySelector("h1[data-i18n='greeting']").innerHTML = i18next.t("greeting");
     });
+    localStorage.setItem("language", lang);
   });
-  
+});
+
+const saved = localStorage.getItem("language") || "en";
+i18next.changeLanguage(saved, (err, t) => {
+  if (err) return console.error(err);
+  $("body").localize();
+  document.querySelector("h1[data-i18n='greeting']").innerHTML = i18next.t("greeting");
+});
+});

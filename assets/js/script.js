@@ -45,4 +45,15 @@ window.addEventListener('scroll', () => {
     lastScrollY = window.scrollY;
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const home = document.querySelector('.home');
+  const img   = home.querySelector('.home-img');
+  const name  = home.querySelector('.name');
+
+  [img, name].forEach(el => {
+    el.addEventListener('mouseenter', () => home.classList.add('hovered'));
+    el.addEventListener('mouseleave', () => home.classList.remove('hovered'));
+  });
+});
+
 
